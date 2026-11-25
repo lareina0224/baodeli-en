@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henan Baodeli Machinery Manufacturing Co., Ltd. | Shredding & Sorting Equipment</title>
+  <meta name="description" content="Henan Baodeli Machinery Manufacturing Co., Ltd., based in Gongyi, Zhengzhou, Henan, manufactures solid-waste recycling shredding and sorting equipment: shaft shredders, metal shredders, scrap steel crushers, eddy current separators, magnetic separators and complete sorting lines, serving customers in China and 30+ overseas markets." />
+  <style>
+    /* ============ Base & Variables ============ */
+    :root {
+      --brand: #0284c7;
+      --brand-dark: #075985;
+      --brand-soft: #e0f2fe;
+      --green: #54c328;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-soft: #475569;
+      --line: #e2e8f0;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    section { padding: 84px 0; }
+    .section-tag {
+      display: inline-block; font-size: 13px; letter-spacing: 0.14em;
+      color: var(--brand); font-weight: 600; margin-bottom: 12px;
+    }
+    h2 { font-size: 30px; font-weight: 700; margin-bottom: 14px; }
+    .lead { color: var(--text-soft); max-width: 660px; }
+    .center { text-align: center; }
+    .center .lead { margin: 0 auto; }
+
+    .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;
+      border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer;
+      border: 1px solid transparent; transition: transform .15s, box-shadow .15s, background .15s;
+    }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-ghost-light { border-color: rgba(255,255,255,.4); color: #fff; }
+    .btn-ghost-light:hover { background: rgba(255,255,255,.12); }
+    .btn-ghost { border-color: var(--line); background: var(--surface); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--brand); color: var(--brand); }
+
+    /* ============ Nav ============ */
+    header {
+      position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-weight: 700; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+    .logo-mark { width: 34px; height: 34px; border-radius: 10px; background: var(--brand);
+      color: #fff; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+    .logo-img { height: 40px; width: auto; display: block; }
+    .footer-logo { background: #fff; border-radius: 12px; padding: 8px 14px; display: inline-flex; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--text-soft); font-size: 15px; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--brand); }
+    .nav-cta { padding: 10px 20px; }
+    .menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: 10px;
+      width: 42px; height: 42px; cursor: pointer; font-size: 18px; color: var(--text); }
+
+    /* ============ Hero ============ */
+    .hero {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 55%, #00a5ec 100%);
+      color: #fff; padding: 100px 0 90px; position: relative; overflow: hidden;
+    }
+    .hero::after { content: ""; position: absolute; right: -120px; top: -120px; width: 380px; height: 380px; border-radius: 50%; background: rgba(255,255,255,.08); }
+    .hero::before { content: ""; position: absolute; left: -80px; bottom: -140px; width: 280px; height: 280px; border-radius: 50%; background: rgba(255,255,255,.06); }
+    .hero .container { position: relative; z-index: 1; }
+    .hero h1 { font-size: 36px; line-height: 1.3; margin: 18px 0 20px; max-width: 780px; }
+    .hero p { font-size: 17px; color: rgba(255,255,255,.9); max-width: 660px; margin-bottom: 30px; }
+    .hero-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(255,255,255,.15); font-size: 13px; }
+    .hero-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+    .hero-tags span { font-size: 13px; padding: 6px 12px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; }
+
+    /* ============ Advantages ============ */
+    .adv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 40px; }
+    .adv-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; transition: transform .18s, box-shadow .18s; }
+    .adv-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .adv-ico { width: 48px; height: 48px; border-radius: 14px; background: var(--brand-soft); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; }
+    .adv-card h3 { font-size: 17px; margin-bottom: 8px; }
+    .adv-card p { color: var(--text-soft); font-size: 14px; }
+
+    /* ============ Products ============ */
+    .products { background: var(--surface); }
+    .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .prod-card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .18s, box-shadow .18s; display: flex; flex-direction: column; }
+    .prod-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .prod-thumb { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 34px; color: #fff; }
+    .prod-thumb-img { height: 210px; overflow: hidden; background: var(--bg); }
+    .prod-thumb-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .about-photo img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+    .about-photo .photo-caption { margin-top: 10px; font-size: 13px; color: var(--text-soft); text-align: center; }
+    .p1 { background: linear-gradient(135deg, #54c328, #00a5ec); }
+    .p2 { background: linear-gradient(135deg, #334155, #64748b); }
+    .p3 { background: linear-gradient(135deg, #075985, #0284c7); }
+    .prod-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+    .prod-body h3 { font-size: 18px; margin-bottom: 10px; }
+    .prod-body p { color: var(--text-soft); font-size: 14px; }
+    .tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .tag { font-size: 12px; padding: 5px 11px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); }
+
+    /* ============ Stats ============ */
+    .stats { background: var(--brand-dark); color: #fff; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+    .stat-num { font-size: 38px; font-weight: 700; }
+    .stat-num span { font-size: 20px; }
+    .stat-text { font-size: 26px; font-weight: 700; }
+    .stat-label { color: rgba(255,255,255,.8); margin-top: 6px; font-size: 15px; }
+
+    /* ============ About ============ */
+    .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+    .about-points { display: grid; gap: 16px; margin-top: 24px; }
+    .about-points li { display: flex; gap: 12px; color: var(--text-soft); }
+    .about-points li::before { content: "✓"; color: var(--brand); font-weight: 700; }
+    .about-panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
+    .about-panel h3 { margin-bottom: 12px; }
+
+    /* ============ Materials ============ */
+    .material-wall { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .material-wall .chip { padding: 10px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: 15px; }
+    .material-note { margin-top: 22px; color: var(--text-soft); }
+
+    /* ============ Service ============ */
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .service-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .service-card .step { display: inline-block; font-size: 13px; font-weight: 700; color: #fff; background: var(--brand); border-radius: 999px; padding: 4px 12px; margin-bottom: 16px; }
+    .service-card h3 { font-size: 18px; margin-bottom: 12px; }
+    .service-card ul { display: grid; gap: 10px; }
+    .service-card li { display: flex; gap: 10px; color: var(--text-soft); font-size: 14px; }
+    .service-card li::before { content: "•"; color: var(--brand); }
+
+    /* ============ Contact ============ */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 36px; margin-top: 36px; }
+    .contact-info { display: grid; gap: 20px; align-content: start; }
+    .contact-item { display: flex; gap: 16px; }
+    .contact-item .ico { width: 44px; height: 44px; border-radius: 12px; background: var(--brand-soft); display: flex; align-items: center; justify-content: center; font-size: 19px; flex: none; }
+    .contact-item h4 { font-size: 15px; }
+    .contact-item p { color: var(--text-soft); font-size: 14px; }
+    .contact-phone { font-size: 22px; font-weight: 700; color: var(--brand); }
+    .form-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .field input, .field textarea, .field select { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; font: inherit; background: var(--bg); color: var(--text); }
+    .field textarea { resize: vertical; min-height: 110px; }
+    .form-note { font-size: 13px; color: var(--text-soft); margin-top: 12px; }
+
+    /* ============ Footer ============ */
+    footer { background: #0f172a; color: #cbd5e1; padding: 56px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 36px; }
+    footer h4 { color: #fff; font-size: 15px; margin-bottom: 16px; }
+    footer li { margin-bottom: 10px; font-size: 14px; }
+    footer a:hover { color: #fff; }
+    .footer-about p { font-size: 14px; margin-top: 12px; max-width: 300px; }
+    .footer-bottom { border-top: 1px solid #1e293b; padding: 20px 0; text-align: center; font-size: 13px; color: #94a3b8; }
+
+    /* ============ Responsive ============ */
+    @media (max-width: 960px) {
+      .adv-grid, .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .prod-grid, .service-grid { grid-template-columns: 1fr; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 28px; }
+      .nav-links { position: absolute; top: 68px; left: 0; right: 0; background: var(--surface); flex-direction: column; gap: 0; border-bottom: 1px solid var(--line); display: none; }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 14px 24px; border-top: 1px solid var(--line); }
+      .nav-cta { display: none; }
+      .menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ Nav ============ -->
+  <header>
+    <div class="container nav">
+      <a href="#top" class="logo"><img class="logo-img" src="assets/logo.png" alt="Baodeli BAODELI" /></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#products">Equipment</a></li>
+        <li><a href="#lines">Sorting Lines</a></li>
+        <li><a href="#materials">Materials</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" id="top">
+    <div class="container">
+      <span class="hero-badge">Solid Waste Recycling Shredding & Sorting Equipment · Manufacturer</span>
+      <h1>Henan Baodeli Machinery Manufacturing Co., Ltd.</h1>
+      <p>Based in Gongyi City, Zhengzhou, Henan — a well-known cluster for crushing and recycling equipment. Leveraging mature local machining supply chains, we integrate R&D, production, sales, solution design, installation and maintenance, focusing on solid-waste recycling shredding and sorting equipment sold across Chinese provinces and 30+ overseas markets.</p>
+      <div class="hero-tags">
+        <span>R&D · Production · Sales</span>
+        <span>Solution Design</span>
+        <span>Installation & Maintenance</span>
+        <span>Export Orders Welcome</span>
+      </div>
+      <div class="btn-row">
+        <a href="#contact" class="btn btn-primary">Inquire / Get Equipment Selection</a>
+        <a href="#about" class="btn btn-ghost-light">Visit & Test Material On Site</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Advantages ============ -->
+  <section id="advantages">
+    <div class="container">
+      <div class="center">
+        <span class="section-tag">Why Choose Us</span>
+        <h2>Direct Manufacturer · Pre-Delivery Inspection · Long-Term Parts Supply</h2>
+        <p class="lead">Own workshops and a testing yard; an experienced team focused on equipment stability, wear life and lower downtime and consumable costs.</p>
+      </div>
+      <div class="adv-grid" id="advGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ Products ============ -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="center">
+        <span class="section-tag">Equipment</span>
+        <h2>Shredding & Sorting Machines</h2>
+        <p class="lead">For recycling businesses processing scrap metal, plastic, broken bridge aluminum, domestic waste and industrial solid waste. Shredding followed by sorting improves metal purity and the selling price of the output; eddy current and magnetic separators can be supplied with the line.</p>
+      </div>
+      <div class="prod-grid" id="prodGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ Stats ============ -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid" id="statsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ About ============ -->
+  <section id="about">
+    <div class="container about-grid">
+      <div>
+        <span class="section-tag">About Us</span>
+        <h2>A Manufacturer Deep in the Crushing & Shredding Industry</h2>
+        <p class="lead">We own an assembly workshop, machining area and independent trial-testing yard, covering machining, welding, assembly and whole-machine testing. Every machine undergoes no-load and load tests before delivery. Our core team keeps optimizing designs around common industry pain points.</p>
+        <ul class="about-points" id="aboutPoints"></ul>
+      </div>
+      <div class="about-photo">
+        <img src="assets/factory-aerial.jpg" alt="Baodeli factory workshop" loading="lazy" />
+        <div class="photo-caption">Factory workshop · Book a visit and material test on site</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Materials ============ -->
+  <section id="materials">
+    <div class="container">
+      <div class="center">
+        <span class="section-tag">Materials</span>
+        <h2>Recyclable Materials We Process</h2>
+        <p class="lead">Shredding and sorting are used together to raise metal purity and improve the value of the finished product.</p>
+      </div>
+      <div class="material-wall" id="materialWall"></div>
+      <p class="material-note">For more material selection and output solutions, contact us for a free consultation or bring your material to the factory for a test run.</p>
+    </div>
+  </section>
+
+  <!-- ============ Service ============ -->
+  <section id="service">
+    <div class="container">
+      <div class="center">
+        <span class="section-tag">Service</span>
+        <h2>Full-Process Support: Pre-Sales, Production, After-Sales</h2>
+      </div>
+      <div class="service-grid" id="serviceGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ Contact ============ -->
+  <section id="contact">
+    <div class="container">
+      <div class="center">
+        <span class="section-tag">Contact</span>
+        <h2>Inquire About Models & Production Lines</h2>
+        <p class="lead">Call us to discuss your material and capacity requirements, or book a factory visit and material test. The form is a static demo and does not submit online yet; please call directly.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" id="contactInfo"></div>
+        <div class="form-card">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone / WhatsApp</label>
+                <input id="phone" type="tel" placeholder="Your phone number" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="material">Material / Needs</label>
+              <input id="material" type="text" placeholder="e.g. scrap steel, broken bridge aluminum, plastic" />
+            </div>
+            <div class="field">
+              <label for="msg">Message</label>
+              <textarea id="msg" placeholder="Briefly describe the material, required capacity or site conditions"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            <p class="form-note">Demo form: data is not actually sent yet. A form service or backend can be connected later to collect leads.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo"><img class="logo-img" src="assets/logo.png" alt="Baodeli BAODELI" /></div>
+          <p>Henan Baodeli Machinery Manufacturing Co., Ltd. — manufacturer of solid-waste recycling shredding and sorting equipment, serving customers across China and 30+ overseas markets.</p>
+        </div>
+        <div>
+          <h4>Shredders</h4>
+          <ul>
+            <li>Double-shaft shredder</li>
+            <li>Single-shaft shredder</li>
+            <li>Metal shredder / scrap steel crusher</li>
+            <li>Can / color steel tile / plastic crusher</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Separators & Lines</h4>
+          <ul>
+            <li>Eddy current separator</li>
+            <li>Magnetic separator</li>
+            <li>Broken bridge aluminum line</li>
+            <li>Scrap aluminum / appliance dismantling line</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Phone: +86 17836901798</li>
+            <li>Address: Gongyi City, Zhengzhou, Henan, China</li>
+            <li>Factory visit & material test welcome</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Henan Baodeli Machinery Manufacturing Co., Ltd. · Static demo site · Add email and other details before going live</div>
+    </div>
+  </footer>
+
+  <script>
+    /* ============ Data (inline, easy to edit) ============ */
+    const advantages = [
+      { ico: "🏭", title: "Direct Manufacturer", desc: "Own assembly workshop, machining area and independent trial-testing yard; complete machining, welding, assembly and testing processes." },
+      { ico: "✅", title: "Strict Pre-Delivery Inspection", desc: "Every machine runs no-load and load tests before delivery, with a full inspection process. On-site viewing and material testing welcome." },
+      { ico: "🛠️", title: "Industry-Proven Optimization", desc: "An experienced team optimizing chamber structure, flow channels, rotor shafts and liner materials to solve common pain points." },
+      { ico: "📦", title: "Long-Term Parts Supply", desc: "Common wear parts kept in stock; original parts supplied long-term with fast dispatch of wear-resistant components." }
+    ];
+
+    const products = [
+      {
+        img: "assets/double-shaft-shredder.jpg", title: "Double-Shaft Shredder",
+        desc: "Twin-shaft shear shredding for scrap metal, plastic and light materials; adjustable output size, preparing material for downstream sorting.",
+        tags: ["Twin-shaft shredding", "Scrap metal / plastic"]
+      },
+      {
+        img: "assets/metal-crusher.jpg", title: "Metal Crusher",
+        desc: "Heavy-duty crushing of scrap steel and aluminum; dense output eases transport and downstream sorting.",
+        tags: ["Scrap steel crushing", "Scrap aluminum crushing"]
+      },
+      {
+        img: "assets/can-crusher.jpg", title: "Can Crusher",
+        desc: "Crushes beverage cans and light metal cans to increase material density and recycling value.",
+        tags: ["Can crushing", "Light scrap crushing"]
+      },
+      {
+        img: "assets/grinder.jpg", title: "Dry Grinder",
+        desc: "Rotary dry-grinding unit for milling, screening and downstream processing, configured as part of a production line.",
+        tags: ["Dry grinding", "Rotary mill"]
+      },
+      {
+        img: "assets/eddy-current-separator.jpg", title: "Eddy Current Separator",
+        desc: "Separates aluminum from plastic and metals from non-metals; paired with shredders to raise metal purity and output value.",
+        tags: ["Eddy current separation", "Bridge aluminum sorting", "Aluminum-plastic separation", "Metal / non-metal separation"]
+      },
+      {
+        img: "assets/production-line.jpg", title: "Complete Sorting Line",
+        desc: "Shredding, conveying and sorting linked together around your material and site; on-site installation and commissioning available.",
+        tags: ["Bridge aluminum line", "Scrap aluminum line", "Appliance dismantling line"]
+      },
+      {
+        img: "assets/line-model.jpg", title: "Line Solution Design",
+        desc: "3D line model and layout planning; process flow, equipment configuration and budget estimate defined before sales.",
+        tags: ["Solution design", "Line planning", "Magnetic separator"]
+      }
+    ];
+
+    const stats = [
+      { num: 30, suffix: "+", label: "Overseas Markets" },
+      { num: 100, suffix: "%", label: "Pre-Delivery Tested" },
+      { text: "Full Process", label: "Pre-Sales · Production · After-Sales" },
+      { text: "Lifetime", label: "Technical Consultation" }
+    ];
+
+    const aboutPoints = [
+      "Optimized chamber and flow channels to prevent jamming, clogging and uneven output",
+      "Improved cooling and sealing to reduce overheating and dust leakage",
+      "Upgraded rotor shaft and liner materials to extend wear-part life",
+      "Higher equipment stability, less downtime and lower consumable costs"
+    ];
+
+    const materials = ["Scrap steel", "Scrap aluminum", "Aluminum alloy", "Broken bridge aluminum", "Sheet iron", "Color steel tile", "Cans", "Plastic", "Rubber", "Woven bags", "Scrap metal", "Appliance shells", "Domestic waste", "Industrial scrap"];
+
+    const services = [
+      { step: "Pre-Sales", title: "Selection & Consulting", items: ["Free technical consultation and material-based model selection", "Site layout planning and production line investment estimate", "Bring your raw material to the factory for a test run"] },
+      { step: "Production", title: "Progress & Delivery", items: ["Production progress updates; whole-machine test before delivery", "Checklist review and loading arrangement before shipment", "Engineers available for on-site installation, commissioning and wiring"] },
+      { step: "After-Sales", title: "Training & Long-Term Care", items: ["On-site operator training: operation, maintenance and wear-part replacement", "After-sales channel for timely fault response", "Long-term original parts supply; fast dispatch of common wear parts", "Lifetime technical consultation and periodic maintenance inspection"] }
+    ];
+
+    const contacts = [
+      { ico: "📞", title: "Sales Hotline", text: "+86 17836901798" },
+      { ico: "📍", title: "Address", text: "Gongyi City, Zhengzhou, Henan, China (factory visit and material test by appointment)" },
+      { ico: "🕘", title: "Working Hours", text: "Monday to Friday, welcome to call" },
+      { ico: "🌍", title: "Business Scope", text: "Domestic recycling enterprises; export orders accepted, products sold to 30+ overseas markets" }
+    ];
+
+    /* ============ Render ============ */
+    document.getElementById("advGrid").innerHTML = advantages.map(a => `
+      <div class="adv-card"><div class="adv-ico">${a.ico}</div><h3>${a.title}</h3><p>${a.desc}</p></div>`).join("");
+
+    document.getElementById("prodGrid").innerHTML = products.map(p => `
+      <article class="prod-card">
+        <div class="prod-thumb-img"><img src="${p.img}" alt="${p.title}" loading="lazy" /></div>
+        <div class="prod-body">
+          <h3>${p.title}</h3><p>${p.desc}</p>
+          <div class="tag-row">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+        </div>
+      </article>`).join("");
+
+    document.getElementById("aboutPoints").innerHTML = aboutPoints.map(x => `<li>${x}</li>`).join("");
+
+    document.getElementById("materialWall").innerHTML = materials.map(m => `<span class="chip">${m}</span>`).join("");
+
+    document.getElementById("serviceGrid").innerHTML = services.map(s => `
+      <div class="service-card">
+        <span class="step">${s.step}</span><h3>${s.title}</h3>
+        <ul>${s.items.map(i => `<li>${i}</li>`).join("")}</ul>
+      </div>`).join("");
+
+    document.getElementById("contactInfo").innerHTML = contacts.map(c => `
+      <div class="contact-item"><div class="ico">${c.ico}</div><div><h4>${c.title}</h4><p class="${c.title === 'Sales Hotline' ? 'contact-phone' : ''}">${c.text}</p></div></div>`).join("");
+
+    /* ============ Animated counters (numeric cards only) ============ */
+    const statsEl = document.getElementById("statsGrid");
+    statsEl.innerHTML = stats.map((s) => {
+      const inner = s.num !== undefined
+        ? `<div class="stat-num" data-target="${s.num}">0</div>`
+        : `<div class="stat-text">${s.text}</div>`;
+      return `<div>${inner}<div class="stat-label">${s.label}</div></div>`;
+    }).join("");
+    const statNums = [...statsEl.querySelectorAll(".stat-num")];
+    let counted = false;
+    function animateStats() {
+      if (counted) return; counted = true;
+      statNums.forEach(el => {
+        const target = +el.dataset.target;
+        const suffix = stats.find(s => s.num === target).suffix;
+        const dur = 1200; const start = performance.now();
+        function tick(now) {
+          const p = Math.min((now - start) / dur, 1);
+          el.innerHTML = Math.round(target * p) + `<span>${suffix}</span>`;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }
+    const statObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { animateStats(); statObserver.disconnect(); } });
+    }, { threshold: 0.4 });
+    statObserver.observe(statsEl);
+
+    /* ============ Mobile menu ============ */
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+    navLinks.querySelectorAll("a").forEach(a =>
+      a.addEventListener("click", () => navLinks.classList.remove("open")));
+
+    /* ============ Nav highlight on scroll ============ */
+    const sections = [...document.querySelectorAll("section[id]")];
+    const linkMap = Object.fromEntries([...navLinks.querySelectorAll("a")].map(a => [a.getAttribute("href").slice(1), a]));
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+      Object.entries(linkMap).forEach(([id, a]) => a.classList.toggle("active", id === current));
+    });
+
+    /* ============ Demo form ============ */
+    document.getElementById("contactForm").addEventListener("submit", e => {
+      e.preventDefault();
+      alert("This is a static demo and the form is not submitted online yet. To collect leads, connect a form service or backend later. You can also call the sales hotline +86 17836901798 directly.");
+    });
+  </script>
+</body>
+</html>
